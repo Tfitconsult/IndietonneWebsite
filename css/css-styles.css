@@ -1,0 +1,134 @@
+/* Base Styles */
+:root {
+  --color-primary: #2d3436;
+  --color-secondary: #636e72;
+  --color-accent: #0984e3;
+  --color-background: #f5f6fa;
+  --spacing-unit: 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: var(--color-primary);
+  background: var(--color-background);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-unit);
+}
+
+/* Typography */
+h1, h2 {
+  line-height: 1.2;
+  margin-bottom: var(--spacing-unit);
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: var(--spacing-unit);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+/* Header */
+.hero {
+  padding: calc(var(--spacing-unit) * 4) 0;
+  background: white;
+  text-align: center;
+}
+
+.intro {
+  max-width: 600px;
+  margin: 0 auto var(--spacing-unit);
+  color: var(--color-secondary);
+}
+
+.signature {
+  font-style: italic;
+}
+
+/* Featured Section */
+.featured {
+  padding: calc(var(--spacing-unit) * 2) 0;
+}
+
+.featured-item {
+  display: block;
+  background: white;
+  padding: calc(var(--spacing-unit) * 2);
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Podcast Grid */
+.podcast-grid {
+  padding: calc(var(--spacing-unit) * 2) 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-unit);
+}
+
+.card {
+  background: white;
+  padding: calc(var(--spacing-unit) * 2);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* Footer */
+footer {
+  padding: calc(var(--spacing-unit) * 2) 0;
+  text-align: center;
+  color: var(--color-secondary);
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .hero {
+    padding: calc(var(--spacing-unit) * 2) 0;
+  }
+  
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
